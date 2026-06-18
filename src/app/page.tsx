@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/hero/Hero";
 import BookingModal from "@/components/booking/BookingModal";
-import "../../styles/home.css"
+import "../styles/home.css"
 
 const testimonials = [
   {

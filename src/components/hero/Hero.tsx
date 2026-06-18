@@ -8,7 +8,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   return (
     <section 
       className="hero" 
-      style={{ backgroundImage: `url('/images/homepage-hero.png')` }}
+      style={{ backgroundImage: `url('/images/hero-img.png')` }}
     >
       <div className="hero-overlay"></div>
       <div className="container hero-container">

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import styles from "./Navbar.module.css";
 
 interface NavLink {
   label: string;
@@ -113,14 +112,14 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <div className={`${styles.container} container`}>
-        <Link href="/" className={styles.logo} id="header-logo" aria-label="Music Tutorship Logo">
+    <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
+      <div className="header-container container">
+        <Link href="/" className="header-logo" id="header-logo" aria-label="Music Tutorship Logo">
           Music Tutorship
         </Link>
 
-        <nav className={styles.desktopNav} aria-label="Main Navigation">
-          <ul className={styles.navList}>
+        <nav className="desktop-nav" aria-label="Main Navigation">
+          <ul className="nav-list">
             {NAV_LINKS.map((link) => {
               const isActive = link.label === "HOME";
               return (
@@ -128,7 +127,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     id={`nav-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                    className={`${styles.navLink} ${isActive ? styles.active : ""}`}
+                    className={`nav-link ${isActive ? "active" : ""}`}
                   >
                     {link.label}
                   </Link>
@@ -138,8 +137,8 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <div className={styles.desktopCta}>
-          <Link href="/contact" id="cta-enquire-desktop" className={styles.ctaButton}>
+        <div className="desktop-cta">
+          <Link href="/contact" id="cta-enquire-desktop" className="cta-button">
             ENQUIRE NOW
           </Link>
         </div>
@@ -147,46 +146,46 @@ export default function Navbar() {
         <button
           ref={hamburgerRef}
           id="mobile-menu-toggle"
-          className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerActive : ""}`}
+          className={`hamburger ${isMenuOpen ? "hamburger-active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-drawer"
           aria-label="Toggle Navigation Drawer"
         >
-          <span className={styles.hamburgerLine}></span>
-          <span className={styles.hamburgerLine}></span>
-          <span className={styles.hamburgerLine}></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
         </button>
 
         <div 
-          className={`${styles.overlay} ${isMenuOpen ? styles.overlayVisible : ""}`} 
+          className={`header-overlay ${isMenuOpen ? "overlay-visible" : ""}`} 
           onClick={() => setIsMenuOpen(false)}
         />
 
         <div
           id="mobile-drawer"
           ref={menuRef}
-          className={`${styles.mobileDrawer} ${isMenuOpen ? styles.drawerOpen : ""}`}
+          className={`mobile-drawer ${isMenuOpen ? "drawer-open" : ""}`}
           aria-hidden={!isMenuOpen}
         >
-          <div className={styles.drawerHeader}>
-            <span className={styles.drawerTitle}>Music Tutorship</span>
+          <div className="drawer-header">
+            <span className="drawer-title">Music Tutorship</span>
           </div>
 
-          <nav className={styles.mobileNav} aria-label="Mobile Menu">
-            <ul className={styles.mobileNavList}>
+          <nav className="mobile-nav" aria-label="Mobile Menu">
+            <ul className="mobile-nav-list">
               {NAV_LINKS.map((link, idx) => {
                 const isActive = link.label === "HOME";
                 return (
                   <li
                     key={link.label}
                     style={{ animationDelay: `${idx * 0.05}s` }}
-                    className={isMenuOpen ? styles.animateSlideIn : ""}
+                    className={isMenuOpen ? "animate-slide-in" : ""}
                   >
                     <Link
                       href={link.href}
                       id={`mobile-nav-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                      className={`${styles.mobileNavLink} ${isActive ? styles.mobileActive : ""}`}
+                      className={`mobile-nav-link ${isActive ? "mobile-active" : ""}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
@@ -198,13 +197,13 @@ export default function Navbar() {
           </nav>
 
           <div
-            className={`${styles.drawerFooter} ${isMenuOpen ? styles.animateSlideIn : ""}`}
+            className={`drawer-footer ${isMenuOpen ? "animate-slide-in" : ""}`}
             style={{ animationDelay: `${NAV_LINKS.length * 0.05}s` }}
           >
             <Link
               href="/contact"
               id="cta-enquire-mobile"
-              className={styles.ctaButtonDrawer}
+              className="cta-button-drawer"
               onClick={() => setIsMenuOpen(false)}
             >
               ENQUIRE NOW

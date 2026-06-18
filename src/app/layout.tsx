@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import "./globals.css";
-import "../styles/about.css";
+
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({

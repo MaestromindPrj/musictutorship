@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavLink {
   label: string;
@@ -17,6 +18,7 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -121,13 +123,13 @@ export default function Navbar() {
         <nav className="desktop-nav" aria-label="Main Navigation">
           <ul className="nav-list">
             {NAV_LINKS.map((link) => {
-              const isActive = link.label === "HOME";
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     id={`nav-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                    className={`nav-link ${isActive ? "active" : ""}`}
+                    className={`nav-link ${isActive ? "active nav-active" : ""}`}
                   >
                     {link.label}
                   </Link>
@@ -175,7 +177,7 @@ export default function Navbar() {
           <nav className="mobile-nav" aria-label="Mobile Menu">
             <ul className="mobile-nav-list">
               {NAV_LINKS.map((link, idx) => {
-                const isActive = link.label === "HOME";
+                const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
                 return (
                   <li
                     key={link.label}

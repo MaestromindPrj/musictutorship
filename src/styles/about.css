@@ -139,10 +139,12 @@ body {
   transform-origin: left;
 }
 
+.nav-link.active,
 .nav-active {
   color: var(--text-primary) !important;
 }
 
+.nav-link.active::after,
 .nav-active::after {
   transform: scaleX(1) !important;
 }

@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/navbar/Navbar";
 import Hero from "@/components/hero/Hero";
-import Footer from "@/components/footer/Footer";
 import BookingModal from "@/components/booking/BookingModal";
+import "../styles/home.css";
+
 const testimonials = [
   {
     id: 1,
@@ -120,9 +120,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      
-
       <main>
       
         <Hero onOpenBooking={() => openBookingModal("Bootcamp")} />
@@ -410,7 +407,6 @@ export default function Home() {
         </section>
       </main>
 
-      <Footer />
       {isBookingOpen && (
         <BookingModal 
           isOpen={isBookingOpen} 

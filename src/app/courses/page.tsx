@@ -4,12 +4,13 @@ import Link from "next/link";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import CourseHero from "@/components/course-hero/course-hero";
+import BookingModal from "@/components/booking/BookingModal";
+import "../../styles/courses.css";
 
 
 export default function CoursesPage() {
   return (
     <>
-      <Navbar />
 
       <main className="courses-page">
 
@@ -161,7 +162,7 @@ export default function CoursesPage() {
                         your creative workflow with professional guidance.
                     </p>
 
-                    <button className="cta-button">
+                    <button className="btn-primary-white">
                         BOOK YOUR FREE DEMO
                     </button>
 
@@ -171,7 +172,6 @@ export default function CoursesPage() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import FAQ from "@/components/faq/Faq";
+import "../../styles/contact.css";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -79,7 +80,6 @@ export default function ContactPage() {
     };
   return (
     <>
-      <Navbar />
       <main className="contact-page">
         
         <section 
@@ -256,7 +256,6 @@ export default function ContactPage() {
         <FAQ />
 
       </main>
-      <Footer />
     </>
   );
 }

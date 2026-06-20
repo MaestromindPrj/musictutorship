@@ -1201,7 +1201,7 @@ border: solid 1px #cdcdcd68;
 .testimonial-card {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid var(--border-light);
+  border: 1px solid #e0e0e0;
   padding: 40px;
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);

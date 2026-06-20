@@ -5,7 +5,7 @@ export default function CoursesHero() {
     <section
       className="courses-hero"
       style={{
-        backgroundImage: "url('/images/courses-hero.png')",
+        backgroundImage: "url('/images/hero-img.png')",
       }}
     >
       <div className="courses-hero-overlay"></div>

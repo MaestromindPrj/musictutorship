@@ -7,7 +7,6 @@ import Hero from "@/components/hero/Hero";
 import BookingModal from "@/components/booking/BookingModal";
 
 import "../styles/home.css";
-import "../styles/home.css"
 
 
 const testimonials = [
@@ -94,32 +93,6 @@ export default function Home() {
     setIsBookingOpen(true);
   };
 
-  
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px -10% -10% 0px",
-      threshold: 0.1,
-    };
-
-    const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-active");
-          observer.unobserve(entry.target); 
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    const elementsToReveal = document.querySelectorAll(".reveal");
-    
-    elementsToReveal.forEach((el) => observer.observe(el));
-
-    return () => {
-      elementsToReveal.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
 
   return (
     <>

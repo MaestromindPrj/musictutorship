@@ -1,11 +1,17 @@
-"use client";
+import { Metadata } from "next";
 import Hero from "../../components/hero/Hero";
 import Image from "next/image";
+import Link from "next/link";
 import "../../styles/about.css";
+
+export const metadata: Metadata = {
+  title: "About Me | Music Tutorship",
+  description: "Learn about Vijay, a music producer and educator with over a decade of industry experience, offering custom courses and 1-on-1 mentorship.",
+};
 
 export default function AboutPage() {
   return (
-    <div className="main-wrapper main-content bg-white">
+    <main className="main-wrapper main-content bg-white">
       <Hero 
         overline="MEET YOUR MENTOR"
         title="Your journey starts here"
@@ -40,9 +46,9 @@ export default function AboutPage() {
                 I believe that music production is not just about technology - it's about storytelling, emotion, and connecting with your audience. Through personalized mentorship, I guide students on a transformative journey that goes beyond software.
               </p>
             </div>
-            <button className="btn-dark anim" style={{ '--anim-delay': '0.7s' } as any}>
+            <Link href="/contact" className="btn-dark anim" style={{ '--anim-delay': '0.7s' } as any}>
               START YOUR JOURNEY <span aria-hidden="true">&rarr;</span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -137,6 +143,6 @@ export default function AboutPage() {
           ></iframe>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

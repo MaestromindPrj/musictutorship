@@ -34,8 +34,43 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call on mount to set initial state correctly on refresh
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    let observer: IntersectionObserver | null = null;
+    let elementsToObserve: NodeListOf<Element> | null = null;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px -10% -10% 0px",
+      threshold: 0.1,
+    };
+
+    const handleIntersect = (entries: IntersectionObserverEntry[], obs: IntersectionObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+          obs.unobserve(entry.target); 
+        }
+      });
+    };
+
+    // Delay querying to ensure DOM has fully hydrated/rendered
+    const timer = setTimeout(() => {
+      observer = new IntersectionObserver(handleIntersect, observerOptions);
+      elementsToObserve = document.querySelectorAll(".reveal");
+      elementsToObserve.forEach((el) => observer?.observe(el));
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      if (observer && elementsToObserve) {
+        elementsToObserve.forEach((el) => observer?.unobserve(el));
+      }
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (isMenuOpen) {

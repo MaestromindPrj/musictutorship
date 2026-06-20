@@ -1,11 +1,17 @@
-"use client";
+import { Metadata } from "next";
 import Hero from "../../components/hero/Hero";
 import Image from "next/image";
+import Link from "next/link";
 import "../../styles/about.css";
+
+export const metadata: Metadata = {
+  title: "Music Production Blog & Tutorials | Music Tutorship",
+  description: "Get expert insights, sound design tips, software reviews, and mixing/mastering guides from our music production studio.",
+};
 
 export default function BlogPage() {
   return (
-    <div className="main-wrapper main-content bg-zinc-50">
+    <main className="main-wrapper main-content bg-zinc-50">
       <Hero 
         overline="KNOWLEDGE BASE"
         title="Blogs"
@@ -115,9 +121,9 @@ export default function BlogPage() {
               <p className="widget-desc">
                 Weekly production tips and exclusive course discounts delivered to your inbox.
               </p>
-              <button className="btn-light">
+              <Link href="/contact" className="btn-light">
                 ENQUIRE NOW
-              </button>
+              </Link>
             </div>
 
             <div className="sidebar-widget">
@@ -133,6 +139,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

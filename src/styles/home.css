@@ -57,7 +57,7 @@ body {
   left: 0;
   width: 100%;
   height: 94px;
-  background-color: rgba(255, 255, 255, 0.873);
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(98, 98, 98, 0.25);
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
@@ -251,7 +251,7 @@ body {
   right: 0;
   width: 320px;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.897);
+  background-color: rgb(255, 255, 255);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
@@ -371,7 +371,7 @@ body {
   animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Responsive Breakpoints */
+
 @media (max-width: 1024px) {
   .desktop-nav,
   .desktop-cta {
@@ -1202,7 +1202,6 @@ border: solid 1px #cdcdcd68;
   position: relative;
   background-color: #ffffff;
   border: 1px solid var(--border-light);
-  border-radius: 12px;
   padding: 40px;
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -1343,7 +1342,6 @@ border: solid 1px #cdcdcd68;
 .faq-list {
   position: relative;
   background: #ffffff;
-  border-radius: 12px;
   border: 1px solid var(--border-light);
   box-shadow: 0 20px 40px rgba(0,0,0,0.03);
   padding: 20px 40px;

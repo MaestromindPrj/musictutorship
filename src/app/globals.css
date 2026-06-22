@@ -675,8 +675,8 @@ ul, ol {
 }
 
 @keyframes textGlowBeat {
-  0% { text-shadow: 0 0 2px rgba(255, 255, 255, 0.05); }
-  100% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 12px rgba(255, 255, 255, 0.1); }
+  0% { text-shadow: 0 0 1px rgba(255, 255, 255, 0.04); }
+  100% { text-shadow: 0 0 2px rgba(255, 255, 255, 0.1); }
 }
 
 @keyframes beatPulse {

@@ -563,7 +563,14 @@ ul, ol {
     padding: 70px 0;
   }
 }
-
+@keyframes textGlowBeat { 
+  0% { 
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.01); 
+  } 
+  100% { 
+    text-shadow: 0 0 1px rgba(23, 23, 23, 0.05); 
+  } 
+}
 
 @keyframes fadeInUp {
   from {

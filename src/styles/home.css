@@ -1489,11 +1489,6 @@ border: solid 1px #cdcdcd68;
   100% { border-color: rgba(32, 32, 32, 0.2); }
 }
 
-@keyframes textGlowBeat {
-  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0); }
-  50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 10px rgba(226, 74, 88, 0.3); }
-  100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0); }
-}
 
 @keyframes slideBg {
   from { background-position: 0 0; }

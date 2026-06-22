@@ -10,6 +10,7 @@ interface HeroProps {
   secondaryCtaLink?: string;
   hideSecondaryCta?: boolean;
   onOpenBooking?: () => void;
+  showVideo?: boolean;
 }
 
 export default function Hero({
@@ -22,21 +23,25 @@ export default function Hero({
   secondaryCtaLink = "/courses",
   hideSecondaryCta = false,
   onOpenBooking,
+  showVideo = false,
 }: HeroProps) {
   return (
     <section 
       className="hero" 
-      style={{ backgroundImage: `url('/images/hero-img.png')` }}
+      style={!showVideo ? { backgroundImage: `url('/images/hero-img.png')` } : { backgroundColor: '#000000' }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="hero-video-bg"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      {showVideo && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="hero-video-bg"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+      )}
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <span className="hero-overline reveal">{overline}</span>

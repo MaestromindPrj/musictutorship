@@ -136,7 +136,7 @@ export default function Home() {
     <>
       <main>
       
-        <Hero onOpenBooking={() => openBookingModal("Bootcamp")} />
+        <Hero showVideo={true} onOpenBooking={() => openBookingModal("Bootcamp")} />
 
        
         <section className="section-padding container">

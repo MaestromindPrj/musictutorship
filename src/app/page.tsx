@@ -426,7 +426,7 @@ export default function Home() {
                       }
                     }}
                   />
-                  <div className="video-playback-overlay" style={{ pointerEvents: 'none', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.3)', transition: 'opacity 0.3s ease' }} className="video-overlay">
+                  <div className="video-playback-overlay video-overlay" style={{ pointerEvents: 'none', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.3)', transition: 'opacity 0.3s ease' }}>
                     <div className="video-play-btn" style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                         <polygon points="6 3 20 12 6 21 6 3" />

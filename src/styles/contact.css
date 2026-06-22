@@ -675,7 +675,7 @@ ul, ol {
   gap: 24px;
 }
 
-/* form styles */
+
 .contact-form {
   background: #fff;
   padding: 40px;
@@ -806,7 +806,7 @@ ul, ol {
   }
 
   .contact-container {
-    max-width: 90%;
+    max-width: 100%;
     padding: 0 20px;
   }
 
@@ -854,6 +854,10 @@ ul, ol {
 
   .contact-info-item {
     gap: 12px;
+  }
+
+  .faq-list{
+    margin: 0 20px;
   }
 }
 

@@ -77,8 +77,8 @@ export default function Footer() {
             © 2026 MUSIC TUTORSHIP. ALL RIGHTS RESERVED.
           </span>
           <div className="footer-links">
-            <Link href="/privacy">PRIVACY POLICY</Link>
-            <Link href="/terms">TERMS OF SERVICES</Link>
+            <Link href="/privacy-policy">PRIVACY POLICY</Link>
+            <Link href="/terms-of-services">TERMS OF SERVICES</Link>
           </div>
         </div>
       </div>

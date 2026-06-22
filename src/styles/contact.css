@@ -684,8 +684,16 @@ ul, ol {
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-row > .form-group:only-child {
+  grid-column: 1 / -1;
+}
+
+.contact-form > .form-group {
   margin-bottom: 24px;
 }
 
@@ -708,12 +716,21 @@ ul, ol {
   padding: 16px;
   font-size: 16px;
   outline: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-group select {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .form-group textarea {
   height: 170px;
   padding: 20px;
   resize: none;
+  margin-bottom: 24px;
 }
 
 .contact-submit {

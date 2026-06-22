@@ -882,7 +882,7 @@ ul, ol {
 }
 
 .card-title {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--text-primary);
@@ -1198,6 +1198,9 @@ border: solid 1px #cdcdcd68;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
+.testimonials-grid > :nth-child(5) {
+  grid-column: span 2;
+}
 .testimonial-card {
   position: relative;
   background-color: #ffffff;
@@ -1455,7 +1458,9 @@ border: solid 1px #cdcdcd68;
 }
 
 @media (max-width: 991px) {
-  .testimonials-grid { grid-template-columns: 1fr; }
+  
+  .testimonials-grid { grid-template-columns: 1fr;}
+  .testimonials-grid > * { grid-column: auto !important; }
 }
 @media (max-width: 768px) {
   .faq-list { padding: 10px 20px; }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import CourseHero from "@/components/course-hero/course-hero";
+import Hero from "@/components/hero/Hero";
 import BookingModal from "@/components/booking/BookingModal";
 import "../../styles/courses.css";
 
@@ -18,7 +18,15 @@ export default function CoursesClient() {
   return (
     <>
       <main className="courses-page">
-        <CourseHero />
+        <Hero
+          overline="EDUCATION PATHWAYS"
+          title="Our Programs"
+          desc="Choose your musical journey. From foundational basics to advanced studio techniques, our curated programs are designed for clarity and creative mastery."
+          primaryCtaText="EXPLORE ALL"
+          primaryCtaLink="#courseprograms"
+          secondaryCtaText="ENQUIRE NOW"
+          secondaryCtaLink="/contact"
+        />
 
         <section id="courseprograms" className="section-padding programs-section">
           <div className="container">
@@ -31,7 +39,7 @@ export default function CoursesClient() {
               {/* Mastery Course */}
               <div className="program-card" style={{ transitionDelay: "0.1s" }}>
                 <span className="card-overline">01 / FOUNDATION</span>
-                <h3 className="card-title">Mastery Course</h3>
+                <h3 className="card-title">Complete Music Production Mastery Course</h3>
                 <p className="card-subtitle">From Beginner to Advanced</p>
                 
                 <ul className="card-list">
@@ -41,7 +49,7 @@ export default function CoursesClient() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Setting up your home studio
+                    15 students per batch
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon">
@@ -49,20 +57,25 @@ export default function CoursesClient() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Basic music theory for producers
+                    12 months intensive program
                   </li>
                 </ul>
                 
-                <Link href="/courses/mastery" className="btn-card-ghost">
-                  LEARN MORE
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/mastery" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
 
               {/* Bootcamp */}
               <div className="program-card card-featured" style={{ transitionDelay: "0.25s" }}>
                 <span className="card-badge">POPULAR CHOICE</span>
                 <span className="card-overline">02 / INTENSIVE</span>
-                <h3 className="card-title">Bootcamp</h3>
+                <h3 className="card-title">Essential Producer Transition: Launch Your Music Career</h3>
                 <p className="card-subtitle">From Beginner to Advanced</p>
                 
                 <ul className="card-list">
@@ -74,7 +87,7 @@ export default function CoursesClient() {
                         </svg>
                       </span>
                     </span>
-                    Access to exclusive producer community
+                    Personalized curriculum
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon" style={{ borderColor: 'transparent' }}>
@@ -84,20 +97,23 @@ export default function CoursesClient() {
                         </svg>
                       </span>
                     </span>
-                    Essential software training (DAW of choice)
+                    Flexible scheduling
                   </li>
                 </ul>
                 
-                <Link href="/courses/bootcamp" className="btn-card-solid">
-                  ENROLL NOW
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/bootcamp" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
-
-              {/* 1-on-1 Mentorship */}
               <div className="program-card" style={{ transitionDelay: "0.4s" }}>
                 <span className="card-badge-premium">PREMIUM TIER</span>
                 <span className="card-overline">03 / PERSONALIZED</span>
-                <h3 className="card-title">1-on-1 Mentorship</h3>
+                <h3 className="card-title">1-on-1 Music Production Mentorship</h3>
                 <p className="card-subtitle">Personalized learning experience</p>
                 
                 <ul className="card-list">
@@ -121,9 +137,14 @@ export default function CoursesClient() {
                   </li>
                 </ul>
                 
-                <Link href="/courses/mentorship" className="btn-card-ghost">
-                  APPLY NOW
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/mentorship" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

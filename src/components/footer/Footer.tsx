@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          {/* Column 1 */}
           <div className="footer-col">
             <span className="footer-logo">Music Tutorship</span>
             <p className="footer-desc">
@@ -33,7 +32,7 @@ export default function Footer() {
                 <Link href="/courses/mastery">Complete Music Production Mastery Course</Link>
               </li>
               <li className="footer-list-item">
-                <Link href="/courses/bootcamp">Essential Producer Bootcamp</Link>
+                <Link href="/courses/bootcamp">Essential Producer Transition</Link>
               </li>
               <li className="footer-list-item">
                 <Link href="/courses/mentorship">One-on-One Music Production Mentorship</Link>
@@ -56,7 +55,7 @@ export default function Footer() {
               <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>+91 6374428173</span>
+              <span>+91 63744 28173</span>
             </div>
             
             <div className="footer-contact-item">
@@ -65,7 +64,9 @@ export default function Footer() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span>
-                TVH Beliciaa Towers, Tower II, 6th floor, 71/1 (71/41) Raja Annamalai Puram, M.R.C Nagar, Chennai 600028
+                      Star Atlantic, Shanmughamani Illam, <br />
+                      27/49 Lake View Road, <br />
+                      West Mambalam, Chennai 600033
               </span>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function Footer() {
             © 2026 MUSIC TUTORSHIP. ALL RIGHTS RESERVED.
           </span>
           <div className="footer-links">
-            <Link href="/privacy">PRIVACY PLOICY</Link>
+            <Link href="/privacy">PRIVACY POLICY</Link>
             <Link href="/terms">TERMS OF SERVICES</Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Hero from "../../components/hero/Hero";
+import Hero from "@/components/hero/Hero";
 import Image from "next/image";
 import Link from "next/link";
 import "../../styles/about.css";

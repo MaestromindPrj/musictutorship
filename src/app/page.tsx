@@ -12,35 +12,54 @@ import "../styles/home.css";
 const testimonials = [
   {
     id: 1,
-    quote: "Before this bootcamp, I had no idea where to start. Vijay broke everything down so simply. Within 3 months, I released my first track!",
-    name: "Arjun M.",
-    title: "Now releasing on Spotify",
-    badge: "First release in 3 months",
-    avatar: "A"
+    quote: "I’ve already started producing my tracks with more confidence and Mr. Vijay gave us excellent mentoring from how to structure the composition to producing it. Loved every sessions and detailings went to it. ",
+    name: "Ela Maran",
+    title: "Batch 2B",
+    avatar: "E"
   },
   {
     id: 2,
-    quote: "The hands-on approach was exactly what I needed. Every session built on the last, and I never felt lost. Best investment I've made.",
-    name: "Priya S.",
-    title: "Independent Artist",
-    badge: "10K+ streams on debut",
-    avatar: "P"
+    quote: "Being a businessman with a deep passion for music, Vijay helped me out with all the music production essentials and he guided me on the right path. Now, I can confidently start producing my tracks. ",
+    name: "Fredrick",
+    title: "Batch 2B ",
+    avatar: "F"
   },
   {
     id: 3,
-    quote: "I tried YouTube tutorials for a year with no progress. This bootcamp gave me structure and accountability. Now I produce daily.",
-    name: "Rahul K.",
-    title: "Bedroom Producer",
-    badge: "Daily production habit",
-    avatar: "R"
+    quote: "I’ve took the three months program and it’s already second month now and I’m loving every sessions and Vijay’s guidance is amazing and I wish everyone who’s aspiring to be a music producer could join and experience the class and way he explains the concepts. ",
+    name: "Praveen",
+    title: "Batch 3A ",
+    avatar: "P"
   },
   {
     id: 4,
-    quote: "As a singer, learning production felt overwhelming. Vijay made it accessible. Now I produce my own tracks instead of paying others.",
-    name: "Sneha D.",
-    title: "Singer-Songwriter",
-    badge: "Self-producing all tracks",
+    quote: "I’ve happened to find Vijay through mutual friend and enrolled in the music production program. As a director myself I now can understand how music production works and how to think like a composer, this gives extra edge while I’m directing pilot film",
+    name: "Sri",
+    title: "Batch 1B ",
     avatar: "S"
+  },
+  {
+    id: 5,
+    quote: "We had a most interesting learning experience in Music tutorship under guidance of Vijay sir. He gave us a proper roadmap customised for our goals and he’s been guiding us constantly with motivation and self discipline.",
+    name: "Sarwina",
+    title: "Personalised Mentorship ",
+    avatar: "S"
+  },
+  {
+    id: 6,
+    quote: "The advanced studio setup and professional workflows gave me a clear perspective on modern music making. Highly recommended!",
+    name: "Vikram",
+    title: "Advanced Production Course",
+    avatar: "V",
+    videoUrl: "/videos/testimonial1.mp4"
+  },
+  {
+    id: 7,
+    quote: "Learning here was a game changer for my mixes. The personalized feedback during the 1-on-1 mentorship sessions is invaluable.",
+    name: "Arjun",
+    title: "Personalized Mentorship",
+    avatar: "A",
+    videoUrl: "/videos/testimonial2.mp4"
   }
 ];
 
@@ -92,6 +111,25 @@ export default function Home() {
     setBookingProgram(program);
     setIsBookingOpen(true);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".reveal").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const textTestimonials = testimonials.filter(t => !t.videoUrl);
+  const videoTestimonials = testimonials.filter(t => t.videoUrl);
 
 
   return (
@@ -150,7 +188,7 @@ export default function Home() {
              
               <div className="program-card reveal" style={{ transitionDelay: "0.1s" }}>
                 <span className="card-overline">01 / FOUNDATION</span>
-                <h3 className="card-title">Mastery Course</h3>
+                <h3 className="card-title">Complete Music Production Mastery Course</h3>
                 <p className="card-subtitle">From Beginner to Advanced</p>
                 
                 <ul className="card-list">
@@ -160,7 +198,7 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Setting up your home studio
+                    15 students per batch
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon">
@@ -168,19 +206,24 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Basic music theory for producers
+                    12 months intensive program
                   </li>
                 </ul>
                 
-                <Link href="/courses/mastery" className="btn-card-ghost">
-                  LEARN MORE
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/mastery" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
 
               <div className="program-card card-featured reveal" style={{ transitionDelay: "0.25s" }}>
                 <span className="card-badge">POPULAR CHOICE</span>
                 <span className="card-overline">02 / INTENSIVE</span>
-                <h3 className="card-title">Bootcamp</h3>
+                <h3 className="card-title">Essential Producer Transition: Launch Your Music Career</h3>
                 <p className="card-subtitle">From Beginner to Advanced</p>
                 
                 <ul className="card-list">
@@ -192,7 +235,7 @@ export default function Home() {
                       </svg>
                     </span>
                     </span>
-                    Access to exclusive producer community
+                    Personalized curriculum
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon" style={{ borderColor: 'transparent' }}>
@@ -202,20 +245,25 @@ export default function Home() {
                       </svg>
                     </span>
                     </span>
-                    Essential software training (DAW of choice)
+                    Flexible scheduling
                   </li>
                 </ul>
                 
-                <Link href="/courses/bootcamp" className="btn-card-solid">
-                  ENROLL NOW
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/bootcamp" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
 
            
               <div className="program-card reveal" style={{ transitionDelay: "0.4s" }}>
                 <span className="card-badge-premium">PREMIUM TIER</span>
                 <span className="card-overline">03 / PERSONALIZED</span>
-                <h3 className="card-title">1-on-1 Mentorship</h3>
+                <h3 className="card-title">1-on-1 Music Production Mentorship</h3>
                 <p className="card-subtitle">Personalized learning experience</p>
                 
                 <ul className="card-list">
@@ -239,9 +287,14 @@ export default function Home() {
                   </li>
                 </ul>
                 
-                <Link href="/courses/mentorship" className="btn-card-ghost">
-                  APPLY NOW
-                </Link>
+                <div className="card-buttons-row">
+                  <Link href="/courses/mentorship" className="btn-card-ghost">
+                    LEARN MORE
+                  </Link>
+                  <Link href="/contact" className="btn-card-solid">
+                    ENROLL NOW
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -291,16 +344,19 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <section className="section-padding container testimonials-section">
-          <div className="testimonials-header">
+            <div className="testimonials-header">
             <span className="section-overline">STUDENT SUCCESS</span>
             <h2 className="section-title">Hear from our graduates</h2>
           </div>
 
           <div className="testimonials-grid">
-            {testimonials.map((t, idx) => (
-              <div key={t.id} className="testimonial-card reveal" style={{ transitionDelay: `${idx * 0.15}s` }}>
+            {textTestimonials.map((t, idx) => (
+              <div 
+                key={t.id} 
+                className="testimonial-card reveal" 
+                style={{ transitionDelay: `${idx * 0.15}s` }}
+              >
                 <div className="vinyl-record"></div>
                 <div className="testimonial-card-content">
                   <div className="testimonial-stars">
@@ -320,13 +376,73 @@ export default function Home() {
                         <span className="testimonial-title">{t.title}</span>
                       </div>
                     </div>
-                    <div className="testimonial-badge">{t.badge}</div>
                   </div>
                 </div>
                 
                 <div className="audio-wave">
                   <span></span><span></span><span></span><span></span><span></span>
                 </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="testimonial-videos-grid reveal" style={{ marginTop: '40px', display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            {videoTestimonials.map((t, idx) => (
+              <div 
+                key={t.id} 
+                className="testimonial-video-card" 
+                style={{ 
+                  overflow: 'hidden', 
+                  position: 'relative', 
+                  backgroundColor: '#111', 
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                  height: '750px',
+                  width: '100%'
+                }}
+              >
+                <div className="testimonial-video-container" style={{ width: '100%', height: '100%', position: 'relative' }}>
+                  <video
+                    src={t.videoUrl}
+                    loop
+                    muted
+                    playsInline
+                    className="testimonial-video"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onMouseEnter={(e) => {
+                      const video = e.currentTarget;
+                      video.muted = false;
+                      video.play().catch(() => {});
+                    }}
+                    onMouseLeave={(e) => {
+                      const video = e.currentTarget;
+                      video.pause();
+                    }}
+                    onClick={(e) => {
+                      const video = e.currentTarget;
+                      if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                      } else if ((video as any).webkitRequestFullscreen) {
+                        (video as any).webkitRequestFullscreen();
+                      }
+                    }}
+                  />
+                  <div className="video-playback-overlay" style={{ pointerEvents: 'none', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.3)', transition: 'opacity 0.3s ease' }} className="video-overlay">
+                    <div className="video-play-btn" style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <polygon points="6 3 20 12 6 21 6 3" />
+                      </svg>
+                    </div>
+                    <span className="video-hint" style={{ color: 'white', marginTop: '12px', fontSize: '0.85rem', fontWeight: 500, letterSpacing: '0.5px' }}>Hover: Audio & Play / Click: Fullscreen</span>
+                  </div>
+                </div>
+                <style jsx>{`
+                  .testimonial-video-container .video-overlay {
+                    opacity: 1;
+                  }
+                  .testimonial-video-container:hover .video-overlay {
+                    opacity: 0;
+                  }
+                `}</style>
               </div>
             ))}
           </div>

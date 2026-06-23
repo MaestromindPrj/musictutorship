@@ -254,8 +254,9 @@
 .course-cta-actions {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 15px;
 }
+
 
 .course-cta-primary,
 .course-cta-secondary {
@@ -319,3 +320,5 @@
     max-width: 320px;
   }
 }
+
+/* Responsive adjustments for smaller screens */

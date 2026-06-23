@@ -11,8 +11,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://musictutorship.in"),
   title: "Music Tutorship | Premium Music Education & Courses",
-  description: "Learn music from expert instructor. Explore customized courses, blog insights, and personalized coaching at Music Tutorship.",
+  description:
+    "Learn music from expert instructor. Explore customized courses, blog insights, and personalized coaching at Music Tutorship.",
+  openGraph: {
+    siteName: "Music Tutorship",
+  },
 };
 
 export default function RootLayout({

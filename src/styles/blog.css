@@ -1,18 +1,42 @@
-/* ==========================================================================
-   Blog Listing & Article Styling
-   ========================================================================== */
-
-:root {
-  --blog-max-width: 760px;
-  --color-accent-gold: var(--accent-gold, #e2b13c);
-  --color-text-primary: var(--text-primary, #151515);
-  --color-text-secondary: var(--text-secondary, #555555);
+.featured-image {
+  position: relative;
+  width: 100%;
+  background-color: #e4e4e7;
+  overflow: hidden;
 }
 
-/* Scroll Progress Bar */
+.article-img-inner {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.audio-wave-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-wave-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-20deg);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.audio-wave-hover:hover::after {
+  left: 150%;
+}
+
+/* ── Scroll Progress Bar ── */
 .scroll-progress-container {
   position: fixed;
-  top: 94px; /* Align right below the header (height 94px) */
+  top: 94px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -22,12 +46,12 @@
 
 .scroll-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-accent-gold) 0%, #151515 100%);
+  background: linear-gradient(90deg, var(--accent-gold, #e2b13c) 0%, #151515 100%);
   width: 0%;
   transition: width 0.1s ease-out;
 }
 
-/* Blog Page Layout */
+/* ── Blog Detail Page Layout ── */
 .blog-detail-wrapper {
   background-color: #fafafa;
   min-height: 100vh;
@@ -36,12 +60,12 @@
 }
 
 .blog-detail-container {
-  max-width: var(--blog-max-width);
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* Article Header */
+/* ── Article Header ── */
 .blog-post-header {
   margin-bottom: 3.5rem;
   text-align: left;
@@ -57,10 +81,11 @@
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .blog-post-category {
-  color: var(--color-accent-gold);
+  color: var(--accent-gold, #e2b13c);
   background-color: rgba(226, 177, 60, 0.1);
   padding: 0.25rem 0.75rem;
   border-radius: 2px;
@@ -70,20 +95,19 @@
   font-size: 2.75rem;
   font-weight: 800;
   line-height: 1.15;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
-  position: relative;
 }
 
 .blog-post-subtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary, #555555);
   font-weight: 400;
 }
 
-/* Divider Equalizer Wave */
+/* ── Divider Equalizer Wave ── */
 .blog-post-divider {
   display: flex;
   align-items: center;
@@ -107,35 +131,36 @@
 
 .divider-bar {
   width: 3px;
-  background-color: var(--color-text-primary);
+  background-color: var(--text-primary, #151515);
   border-radius: 1px;
   transform-origin: bottom;
   animation: pulse-wave 1.2s ease-in-out infinite alternate;
 }
 
-.divider-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+.divider-bar:nth-child(1) { height: 6px;  animation-delay: 0.1s; }
 .divider-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
 .divider-bar:nth-child(3) { height: 18px; animation-delay: 0.0s; }
 .divider-bar:nth-child(4) { height: 10px; animation-delay: 0.4s; }
-.divider-bar:nth-child(5) { height: 6px; animation-delay: 0.2s; }
+.divider-bar:nth-child(5) { height: 6px;  animation-delay: 0.2s; }
 
 @keyframes pulse-wave {
-  0% { transform: scaleY(0.3); opacity: 0.5; }
-  100% { transform: scaleY(1); opacity: 1; }
+  0%   { transform: scaleY(0.3); opacity: 0.5; }
+  100% { transform: scaleY(1);   opacity: 1; }
 }
 
-/* Article Content Body */
+/* ── Article Content Body ── */
 .blog-post-content {
   font-size: 1.125rem;
   line-height: 1.8;
   color: #333333;
 }
 
-/* Animations on Scroll */
+/* ── Scroll Animations ── */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.visible {
@@ -147,7 +172,7 @@
   margin-bottom: 2rem;
 }
 
-/* Dropcap */
+/* ── Drop Cap ── */
 .blog-post-content p.intro::first-letter {
   font-size: 3.5rem;
   font-weight: 800;
@@ -155,15 +180,15 @@
   line-height: 0.85;
   margin-right: 0.75rem;
   margin-top: 0.25rem;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
 }
 
-/* Headings within Blog Content */
+/* ── Headings within Blog Content ── */
 .blog-post-content h2 {
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.3;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
   margin-top: 3.5rem;
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
@@ -173,32 +198,32 @@
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.4;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
-/* Blockquotes */
+/* ── Blockquotes ── */
 .blog-post-content blockquote {
-  border-left: 4px solid var(--color-accent-gold);
+  border-left: 4px solid var(--accent-gold, #e2b13c);
   background-color: rgba(226, 177, 60, 0.04);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.6;
-  color: var(--color-text-primary);
-  position: relative;
+  color: var(--text-primary, #151515);
 }
 
-/* Styled Lawsuit Table */
+/* ── Lawsuit Table ── */
 .lawsuit-table-container {
   overflow-x: auto;
   margin: 3rem 0;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   background-color: #ffffff;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lawsuit-table {
@@ -206,6 +231,7 @@
   border-collapse: collapse;
   text-align: left;
   font-size: 0.9375rem;
+  min-width: 480px; /* ensures table doesn't squish too small */
 }
 
 .lawsuit-table th {
@@ -221,7 +247,7 @@
 .lawsuit-table td {
   padding: 1.125rem 1.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  color: var(--color-text-secondary);
+  color: var(--text-secondary, #555555);
   line-height: 1.5;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -232,23 +258,23 @@
 
 .lawsuit-table tr:hover td {
   background-color: rgba(0, 0, 0, 0.015);
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
 }
 
 .lawsuit-table td.label-cell {
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
 }
 
 .lawsuit-table td.outcome-cell {
   font-weight: 500;
 }
 
-/* Callout Box */
+/* ── Callout Box ── */
 .blog-callout {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--color-text-primary);
+  border-left: 4px solid var(--text-primary, #151515);
   padding: 2rem;
   margin: 3rem 0;
   display: flex;
@@ -260,7 +286,7 @@
 .blog-callout-title {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: var(--text-primary, #151515);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -268,11 +294,11 @@
 
 .blog-callout-desc {
   font-size: 0.975rem;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary, #555555);
   line-height: 1.6;
 }
 
-/* Blog Footer Action */
+/* ── Blog Footer CTA ── */
 .blog-footer-cta {
   margin-top: 4.5rem;
   padding: 3rem;
@@ -310,7 +336,7 @@
   letter-spacing: 0.1em;
   padding: 1rem 2.5rem;
   border: 1px solid #ffffff;
-  transition: transform var(--transition-fast), background-color var(--transition-normal), color var(--transition-normal);
+  transition: transform var(--transition-fast, 0.2s), background-color var(--transition-normal, 0.3s), color var(--transition-normal, 0.3s);
 }
 
 .blog-footer-cta .btn-cta:hover {
@@ -319,10 +345,10 @@
   transform: translateY(-2px);
 }
 
-/* Sidebar Widget Specific Adjustments for Single Blog Listing */
+/* ── Blog Listing: Single Card (used in BlogClient) ── */
 .article-single-card {
-  background-color: var(--background);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background-color: var(--background, #ffffff);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   border: 1px solid #f4f4f5;
   display: grid;
   grid-template-columns: 1fr;
@@ -334,5 +360,202 @@
 @media (min-width: 768px) {
   .article-single-card {
     grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+
+.blog-banner-image {
+  height: 400px;
+}
+
+
+.tag.active {
+  background-color: var(--text-primary, #151515);
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .blog-detail-wrapper {
+    padding-top: calc(var(--header-height, 92px) + 1rem);
+    padding-bottom: 3.5rem;
+  }
+
+  .blog-detail-container {
+    padding: 0 1.25rem;
+  }
+
+  .blog-post-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .blog-post-title {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .blog-post-subtitle {
+    font-size: 1.1rem;
+  }
+
+
+  .blog-banner-image {
+    height: 260px;
+  }
+
+  .blog-post-content {
+    font-size: 1.0625rem;
+  }
+
+  .blog-post-content h2 {
+    font-size: 1.4rem;
+    margin-top: 2.75rem;
+  }
+
+  .blog-post-content h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .blog-post-content blockquote {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .blog-callout {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .blog-footer-cta {
+    padding: 2.25rem 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .blog-footer-cta h3 {
+    font-size: 1.4rem;
+  }
+
+  .lawsuit-table th,
+  .lawsuit-table td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .blog-detail-wrapper {
+    padding-bottom: 2.5rem;
+  }
+
+  .blog-detail-container {
+    padding: 0 1rem;
+  }
+
+  .blog-banner-image {
+    height: 200px;
+  }
+
+  .blog-post-meta {
+    gap: 0.5rem;
+    font-size: 0.68rem;
+  }
+
+  .blog-post-title {
+    font-size: 1.6rem;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  .blog-post-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .blog-post-content {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blog-post-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-content p.intro::first-letter {
+    font-size: 2.75rem;
+    margin-right: 0.5rem;
+  }
+
+  .blog-post-content h2 {
+    font-size: 1.25rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-post-content h3 {
+    font-size: 1.1rem;
+    margin-top: 1.75rem;
+  }
+
+  .blog-post-content blockquote {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    margin: 1.75rem 0;
+  }
+
+  .blog-callout {
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .blog-callout-title {
+    font-size: 1rem;
+  }
+
+  .blog-footer-cta {
+    padding: 2rem 1.25rem;
+    margin-top: 3rem;
+  }
+
+  .blog-footer-cta h3 {
+    font-size: 1.25rem;
+  }
+
+  .blog-footer-cta p {
+    font-size: 0.9375rem;
+  }
+
+  .blog-footer-cta .btn-cta {
+    padding: 0.875rem 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lawsuit-table-container {
+    margin: 2rem 0;
+  }
+
+  .lawsuit-table th,
+  .lawsuit-table td {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  /* article-single-card on blog listing */
+  .article-single-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Very small (≤ 360px) */
+@media (max-width: 360px) {
+  .blog-post-title {
+    font-size: 1.45rem;
+  }
+
+  .blog-post-content h2 {
+    font-size: 1.15rem;
   }
 }

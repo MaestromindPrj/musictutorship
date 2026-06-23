@@ -12,7 +12,7 @@ const BLOG_POSTS = [
     desc: "238 of SZA's songs were found inside an AI training database without her knowledge or consent, including unreleased material. How AI is stealing music from artists is not a future concern—it is happening right now, at an industrial scale. This deep-dive walks you through the technology, the lawsuits, and the Indian court cases setting global precedents.",
     category: "AI & COPYRIGHT",
     tags: ["AI", "COPYRIGHT", "LEGAL", "INDUSTRY INSIGHTS"],
-    image: "/images/ai_music_theft.png",
+    image: "/images/ai_music_theft.jpeg",
     date: "June 23, 2026",
   }
 ];

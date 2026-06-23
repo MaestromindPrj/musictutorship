@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollProgressBar from "@/components/blog/ScrollProgressBar";
 import ReadingAnimations from "@/components/blog/ReadingAnimations";
-import "../../../styles/about.css";
 import "../../../styles/blog.css";
 
 interface PageProps {
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: "Understand SZA's 238 songs training database leak, the RIAA lawsuits, the Bombay High Court's Voice as Persona ruling, and what it means for music producers in 2026.",
         images: [
           {
-            url: "/images/ai_music_theft.png",
+            url: "/images/ai_music_theft.jpeg",
             width: 1200,
             height: 630,
             alt: "How AI Is Stealing Music From Artists",
@@ -78,11 +77,11 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
           {/* Banner Image */}
           <div 
-            className="featured-image audio-wave-hover animate-on-scroll visible" 
-            style={{ height: "400px", marginBottom: "3rem" }}
+            className="featured-image audio-wave-hover animate-on-scroll visible blog-banner-image" 
+            style={{ marginBottom: "3rem" }}
           >
             <Image 
-              src="/images/ai_music_theft.png" 
+              src="/images/ai_music_theft.jpeg" 
               alt="AI Music Theft Concept Graphic" 
               fill 
               sizes="(max-width: 1024px) 100vw, 800px" 

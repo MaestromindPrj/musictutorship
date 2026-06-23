@@ -154,7 +154,7 @@ export default function CoursesClient() {
           <div className="container">
             <div className="studio-image-wrapper">
               <img
-                src="/images/courses-hero.png"
+                src="/images/hero-img.png"
                 alt="Professional music production studio"
                 className="studio-image"
               />

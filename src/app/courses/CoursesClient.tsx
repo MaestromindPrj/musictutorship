@@ -66,7 +66,7 @@ export default function CoursesClient() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                    ENQUIRE NOW
                   </Link>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function CoursesClient() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                    ENQUIRE NOW
                   </Link>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function CoursesClient() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                    ENQUIRE NOW
                   </Link>
                 </div>
               </div>

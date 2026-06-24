@@ -151,13 +151,13 @@ export default function BlogClient() {
 
           <div className="blog-sidebar">
             <div className="sidebar-widget widget-dark">
-              <span className="widget-subtitle">MENTORSHIP</span>
-              <h3 className="widget-title">Join the Mentorship List</h3>
+              <span className="widget-subtitle">EMAIL NEWSLETTER</span>
+              <h3 className="widget-title">Join the Newsletter Now!</h3>
               <p className="widget-desc">
-                Learn both the creative and business dimensions of a music career. Protect your creative identity and build a sustainable sound under real mentorship.
+                Get expert tips on copyright protection, AI trends, and music business directly in your inbox.
               </p>
               <Link href="/contact" className="btn-light">
-                ENQUIRE NOW
+                SUBSCRIBE NOW
               </Link>
             </div>
 

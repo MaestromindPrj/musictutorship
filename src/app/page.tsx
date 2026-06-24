@@ -153,7 +153,7 @@ export default function Home() {
             </div>
             <div className="mentor-content reveal" style={{ transitionDelay: "0.2s" }}>
               <span className="section-overline">EXPERT GUIDANCE FOR YOUR JOURNEY</span>
-              <h2 className="section-title">Meet Your Mentor</h2>
+              <h2 className="section-title">Meet Your Mentor, <i>Vijay </i></h2>
               <p className="mentor-text">
                 With over a decade of experience in music production, I&apos;ve dedicated my career to helping aspiring musicians unlock their creative potential. My journey spans working with renowned artists, producing tracks that have reached millions, and mentoring hundreds of students who&apos;ve built successful music careers.
               </p>
@@ -215,7 +215,7 @@ export default function Home() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                    ENQUIRE NOW
                   </Link>
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function Home() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                    ENQUIRE NOW
                   </Link>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function Home() {
                     LEARN MORE
                   </Link>
                   <Link href="/contact" className="btn-card-solid">
-                    ENROLL NOW
+                   ENQUIRE NOW
                   </Link>
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function Home() {
          
           <div className="trust-wide-card reveal" style={{ transitionDelay: "0.5s" }}>
             <div className="trust-wide-left">
-              <span className="trust-wide-title">94%</span>
+              <span className="trust-wide-title">98%</span>
               <span className="trust-wide-desc">STUDENTS SUCCESS RATE</span>
             </div>
             <div className="trust-wide-badge">

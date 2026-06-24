@@ -47,7 +47,7 @@ export default function ContactClient() {
     name: "",
     email: "",
     phone: "",
- 
+
     course: "Complete Music Production Mastery Course",
     message: "",
   });
@@ -171,9 +171,15 @@ export default function ContactClient() {
                       value={formData.course}
                       onChange={handleChange}
                     >
-                      <option value="Complete Music Production Mastery Course">Complete Music Production Mastery Course</option>
-                      <option value="Essential Producer Transition: Launch Your Music Career in 3 Months">Essential Producer Transition: Launch Your Music Career in 3 Months</option>
-                      <option value="1-1 Music Production Mentorship">1-1 Music Production Mentorship</option>
+                      <option value="Complete Music Production Mastery Course">
+                        Complete Music Production Mastery Course
+                      </option>
+                      <option value="Producer Transformation Path">
+                        Producer Transformation Path
+                      </option>
+                      <option value="1-1 Music Production Mentorship">
+                        1-1 Music Production Mentorship
+                      </option>
                     </select>
                   </div>
 
@@ -207,9 +213,9 @@ export default function ContactClient() {
                     />
 
                     <p>
-                      Star Atlantic, Shanmughamani Illam, <br />
-                      27/49 Lake View Road, <br />
-                      West Mambalam, Chennai 600033
+                      TVH Beliciaa Towers, Tower 2, 6th floor, <br />
+                      71/4(71/4), Raja Annamalai Puram, <br />
+                      M.R.C Nagar Chennai 600028
                     </p>
                   </div>
 
@@ -232,14 +238,14 @@ export default function ContactClient() {
                       className="contact-icon"
                     />
 
-                    <p>+91  63744 28173</p>
+                    <p>+91 63744 28173</p>
                   </div>
                 </div>
 
                 <div className="contact-map-wrapper">
                   <iframe
                     title="Studio Location"
-                    src="https://www.google.com/maps/embed?pb=!4v1782273708079!6m8!1m7!1sELJDKcIQbjTdiEUxBwprew!2m2!1d13.03908111109618!2d80.22589385122623!3f123.14!4f3.719999999999999!5f0.4000000000000002"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2604452929077!2d80.26355483775588!3d13.019079643419781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b843237f1d%3A0x800d7fbd1bd00928!2sGreenways%20Rd%2C%20Chennai%2C%20Tamil%20Nadu%20600028!5e0!3m2!1sen!2sin!4v1782314159777!5m2!1sen!2sin"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="contact-map"
@@ -249,7 +255,6 @@ export default function ContactClient() {
             </div>
           </div>
         </section>
-
 
         <section className="section-padding container faq-section">
           <div className="faq-header">

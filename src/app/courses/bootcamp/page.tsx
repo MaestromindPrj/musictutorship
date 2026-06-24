@@ -8,11 +8,11 @@ export default function bootcamp() {
         <div className="container">
 
           <h1 className="course-detail-title">
-            Essential Producer Bootcamp: Launch Your Music Career in 3 Months
+            Producer Transformation Path
           </h1>
 
           <p className="course-detail-description">
-            Intensive Learning Path from Beginner to Intermediate Level
+            Intensive Learning Path from Intermediate to Advanced Level 
           </p>
 
           <div className="course-detail-stats">
@@ -25,7 +25,7 @@ export default function bootcamp() {
               />
 
               <div>
-                <h3>3 Months</h3>
+                <h3>4 Months + Internship</h3>
                 <span>Duration</span>
               </div>
             </div>
@@ -38,7 +38,7 @@ export default function bootcamp() {
               />
 
               <div>
-                <h3>15 Students Per Batch</h3>
+                <h3>13 Students Per Batch</h3>
                 <span>Batch Size</span>
               </div>
             </div>

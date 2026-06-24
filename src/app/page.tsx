@@ -198,7 +198,7 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    15 students per batch
+                    25 students per batch
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon">
@@ -206,7 +206,7 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    12 months intensive program
+                    5 months intensive program
                   </li>
                 </ul>
                 
@@ -223,8 +223,8 @@ export default function Home() {
               <div className="program-card card-featured reveal" style={{ transitionDelay: "0.25s" }}>
                 <span className="card-badge">POPULAR CHOICE</span>
                 <span className="card-overline">02 / INTENSIVE</span>
-                <h3 className="card-title">Essential Producer Transition: Launch Your Music Career</h3>
-                <p className="card-subtitle">From Beginner to Advanced</p>
+                <h3 className="card-title">Producer Transformation Path</h3>
+                <p className="card-subtitle">From Intermediate to Advanced</p>
                 
                 <ul className="card-list">
                   <li className="card-list-item">
@@ -283,7 +283,7 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Advanced production workflows
+                    Personalised Curriculum
                   </li>
                 </ul>
                 

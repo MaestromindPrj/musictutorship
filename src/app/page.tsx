@@ -235,7 +235,7 @@ export default function Home() {
                       </svg>
                     </span>
                     </span>
-                    Personalized curriculum
+                    13 Students per batch
                   </li>
                   <li className="card-list-item">
                     <span className="card-list-icon" style={{ borderColor: 'transparent' }}>
@@ -245,7 +245,7 @@ export default function Home() {
                       </svg>
                     </span>
                     </span>
-                    Flexible scheduling
+                    4 Months + Internship
                   </li>
                 </ul>
                 

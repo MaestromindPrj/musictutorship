@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="about-grid">
           <div className="about-image-wrapper">
             <Image 
-              src="/images/mentor.jpg" 
+              src="/images/mentor.jpeg" 
               alt="Vijay - Music Producer & Educator"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

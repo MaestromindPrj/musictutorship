@@ -143,7 +143,7 @@ export default function Home() {
           <div className="mentor-grid">
             <div className="mentor-img-wrapper reveal">
               <Image 
-                src="/images/mentor.jpg"
+                src="/images/mentor.jpeg"
                 alt="Meet Your Mentor"
                 width={550}
                 height={550}
@@ -206,7 +206,7 @@ export default function Home() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    5 months intensive program
+                    12 months intensive program
                   </li>
                 </ul>
                 

@@ -32,7 +32,7 @@ export default function Footer() {
                 <Link href="/courses/mastery">Complete Music Production Mastery Course</Link>
               </li>
               <li className="footer-list-item">
-                <Link href="/courses/bootcamp">Essential Producer Transition</Link>
+                <Link href="/courses/bootcamp">Producer Transformation Path</Link>
               </li>
               <li className="footer-list-item">
                 <Link href="/courses/mentorship">One-on-One Music Production Mentorship</Link>

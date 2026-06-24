@@ -57,7 +57,7 @@ export default function CoursesClient() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    5 months intensive program
+                    12 months intensive program
                   </li>
                 </ul>
                 

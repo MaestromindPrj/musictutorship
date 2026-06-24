@@ -133,7 +133,7 @@ export default function CoursesClient() {
                         <circle cx="5" cy="5" r="4.5" stroke="currentColor" />
                       </svg>
                     </span>
-                    Advanced production workflows
+                    Personalised Curriculum
                   </li>
                 </ul>
                 

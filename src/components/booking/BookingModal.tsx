@@ -56,7 +56,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
         <div className="booking-calendly-container">
           <InlineWidget 
-            url="https://calendly.com/deephdeeph55/30min" 
+            url="https://calendly.com/musictutorship/new-meeting" 
             styles={{ height: '100%', width: '100%' }} 
           />
         </div>

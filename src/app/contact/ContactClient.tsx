@@ -233,7 +233,7 @@ export default function ContactClient() {
                 <div className="contact-map-wrapper">
                   <iframe
                     title="Studio Location"
-                    src="https://www.google.com/maps?q=Chennai&output=embed"
+                    src="https://maps.app.goo.gl/oLQMkzhq2aHKGTwV7?g_st=ac"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="contact-map"

@@ -233,7 +233,7 @@ export default function ContactClient() {
                 <div className="contact-map-wrapper">
                   <iframe
                     title="Studio Location"
-                    src="https://maps.app.goo.gl/oLQMkzhq2aHKGTwV7?g_st=ac"
+                    src="https://www.google.com/maps/embed?pb=!4v1782273708079!6m8!1m7!1sELJDKcIQbjTdiEUxBwprew!2m2!1d13.03908111109618!2d80.22589385122623!3f123.14!4f3.719999999999999!5f0.4000000000000002"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="contact-map"

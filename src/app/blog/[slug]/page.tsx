@@ -229,7 +229,21 @@ export default async function BlogDetailPage({ params }: PageProps) {
             </p>
 
             <h2 className="animate-on-scroll">What Producers Must Do While AI Keeps Stealing Music</h2>
-            
+
+            <div
+              className="featured-image audio-wave-hover animate-on-scroll"
+              style={{ position: "relative", width: "100%", aspectRatio: "16/9", marginTop: "1.5rem", marginBottom: "2rem", overflow: "hidden" }}
+            >
+              <Image
+                src="/images/blog1-sub.jpeg"
+                alt="What Producers Must Do While AI Keeps Stealing Music"
+                fill
+                sizes="(max-width: 1024px) 100vw, 800px"
+                className="article-img-inner"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+
             <p className="animate-on-scroll">
               Here is the honest reality that I want every producer who reads this to carry forward. AI learns from existing music. It predicts what should come next based on patterns extracted from what has already been made. It does not have a story, a perspective, or a reason to make a creative choice.
             </p>

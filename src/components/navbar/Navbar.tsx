@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface NavLink {
@@ -152,6 +153,14 @@ export default function Navbar() {
     <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container container">
         <Link href="/" className="header-logo" id="header-logo" aria-label="Music Tutorship Logo">
+          <Image
+            src="/images/logo.png"
+            alt="Music Tutorship Logo"
+            width={38}
+            height={38}
+            style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+            priority
+          />
           Music Tutorship
         </Link>
 

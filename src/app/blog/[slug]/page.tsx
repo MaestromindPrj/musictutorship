@@ -56,7 +56,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
       <article className="blog-detail-wrapper">
         <div className="blog-detail-container">
           
-          {/* Article Header */}
           <header className="blog-post-header">
             <div className="blog-post-meta">
               <span className="blog-post-category">Industry Insights</span>

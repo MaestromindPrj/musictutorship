@@ -47,7 +47,8 @@ export default function ContactClient() {
     name: "",
     email: "",
     phone: "",
-    course: "Bootcamp",
+ 
+    course: "Complete Music Production Mastery Course",
     message: "",
   });
 
@@ -80,7 +81,9 @@ export default function ContactClient() {
         "https://script.google.com/macros/s/AKfycby8yDxEG1pbVAcov7iasHC83XBWAk9DcPQjwRutDQOw4fHP56llxJASIwL5YRX3ERFi/exec",
         {
           method: "POST",
-
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
           body: JSON.stringify(formData),
         },
       );
@@ -95,7 +98,7 @@ export default function ContactClient() {
           name: "",
           email: "",
           phone: "",
-          course: "Bootcamp",
+          course: "Complete Music Production Mastery Course",
           message: "",
         });
       }
@@ -122,8 +125,9 @@ export default function ContactClient() {
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="form-row">
                     <div className="form-group">
-                      <label>FIRST NAME</label>
+                      <label htmlFor="firstName">FIRST NAME</label>
                       <input
+                        id="firstName"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
@@ -133,8 +137,9 @@ export default function ContactClient() {
                     </div>
 
                     <div className="form-group">
-                      <label>EMAIL ADDRESS</label>
+                      <label htmlFor="emailAddress">EMAIL ADDRESS</label>
                       <input
+                        id="emailAddress"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -146,8 +151,9 @@ export default function ContactClient() {
 
                   <div className="form-row">
                     <div className="form-group">
-                      <label>PHONE NUMBER</label>
+                      <label htmlFor="phoneNumber">PHONE NUMBER</label>
                       <input
+                        id="phoneNumber"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
@@ -158,23 +164,23 @@ export default function ContactClient() {
                   </div>
 
                   <div className="form-group">
-                    <label>COURSE INTEREST</label>
-
+                    <label htmlFor="courseInterest">COURSE INTEREST</label>
                     <select
+                      id="courseInterest"
                       name="course"
                       value={formData.course}
                       onChange={handleChange}
                     >
-                      <option>Complete Music Production Mastery Course</option>
-                      <option>Essential Producer Transition: Launch Your Music Career in 3 Months</option>
-                      <option>1-1 Music Production Mentorship</option>
+                      <option value="Complete Music Production Mastery Course">Complete Music Production Mastery Course</option>
+                      <option value="Essential Producer Transition: Launch Your Music Career in 3 Months">Essential Producer Transition: Launch Your Music Career in 3 Months</option>
+                      <option value="1-1 Music Production Mentorship">1-1 Music Production Mentorship</option>
                     </select>
                   </div>
 
                   <div className="form-group">
-                    <label>DESCRIPTION</label>
-
+                    <label htmlFor="description">DESCRIPTION</label>
                     <textarea
+                      id="description"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
@@ -244,7 +250,7 @@ export default function ContactClient() {
           </div>
         </section>
 
-        {/* FAQ Section - same as home page */}
+
         <section className="section-padding container faq-section">
           <div className="faq-header">
             <span className="section-overline">

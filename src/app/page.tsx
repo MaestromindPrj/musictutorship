@@ -187,6 +187,7 @@ export default function Home() {
             <div className="programs-grid">
              
               <div className="program-card reveal" style={{ transitionDelay: "0.1s" }}>
+                <span className="card-badge" style={{backgroundColor:"#3b46e4", color:"#ffffff"}}>MOST ENROLLED</span>
                 <span className="card-overline">01 / FOUNDATION</span>
                 <h3 className="card-title">Complete Music Production Mastery Course</h3>
                 <p className="card-subtitle">From Beginner to Advanced</p>

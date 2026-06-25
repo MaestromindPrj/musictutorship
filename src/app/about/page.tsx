@@ -135,7 +135,7 @@ export default function AboutPage() {
 
         <div className="spotify-embed-container">
           <iframe 
-            src="https://open.spotify.com/embed/playlist/1Baqr6iqDkXbHUCXXK8ThG?utm_source=generator&theme=0" 
+            src="https://open.spotify.com/embed/playlist/1Baqr6iqDkXbHUCXXK8ThG?utm_source=generator&theme=0&autoplay=1" 
             width="100%" 
             height="540" 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 

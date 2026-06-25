@@ -433,7 +433,6 @@ export default function Home() {
                         <polygon points="6 3 20 12 6 21 6 3" />
                       </svg>
                     </div>
-                    <span className="video-hint" style={{ color: 'white', marginTop: '12px', fontSize: '0.85rem', fontWeight: 500, letterSpacing: '0.5px' }}>Hover: Audio & Play / Click: Fullscreen</span>
                   </div>
                 </div>
                 <style jsx>{`

@@ -47,12 +47,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
-        </button>
-
-        <div className="booking-header">
-          <span className="booking-overline">START YOUR JOURNEY</span>
-          <h2 className="booking-title">Book Your Free Demo</h2>
-        </div>
+        </button>   
 
         <div className="booking-calendly-container">
           <InlineWidget 

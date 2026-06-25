@@ -153,7 +153,8 @@ export default function Home() {
             </div>
             <div className="mentor-content reveal" style={{ transitionDelay: "0.2s" }}>
               <span className="section-overline">EXPERT GUIDANCE FOR YOUR JOURNEY</span>
-              <h2 className="section-title">Meet Your Mentor, <i>Vijay </i></h2>
+              <h2 className="section-title" style={{fontSize:"36px"}}>Meet Your Mentor,<i style={{fontSize:"48px", letterSpacing:"0px"}}>Vijay </i></h2>
+              
               <p className="mentor-text">
                 With over a decade of experience in music production, I&apos;ve dedicated my career to helping aspiring musicians unlock their creative potential. My journey spans working with renowned artists, producing tracks that have reached millions, and mentoring hundreds of students who&apos;ve built successful music careers.
               </p>

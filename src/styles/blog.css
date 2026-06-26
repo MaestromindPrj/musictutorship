@@ -313,7 +313,6 @@
   line-height: 1.6;
 }
 
-/* ── Blog Footer CTA ── */
 .blog-footer-cta {
   margin-top: 4.5rem;
   padding: 3rem;
@@ -575,12 +574,10 @@
   }
 }
 
-/* ── Newsletter Subscription Form ── */
 .newsletter-form {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
-  margin-top: 1.25rem;
+  gap: 2rem;
 }
 
 .newsletter-input {
@@ -591,7 +588,6 @@
   color: #f4f4f5;
   font-size: 0.875rem;
   font-family: inherit;
-  border-radius: 2px;
   outline: none;
   transition: border-color 0.2s ease, background-color 0.2s ease;
   box-sizing: border-box;
@@ -602,7 +598,7 @@
 }
 
 .newsletter-input:focus {
-  border-color: var(--accent-gold, #e2b13c);
+  border-color: var(--accent-gold);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -634,10 +630,9 @@
   width: 100%;
   cursor: pointer;
   border: none;
-  margin-top: 0.25rem;
 }
 
 .newsletter-submit:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-}
+}

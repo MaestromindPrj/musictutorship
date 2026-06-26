@@ -33,7 +33,7 @@
   left: 150%;
 }
 
-/* ── Scroll Progress Bar ── */
+
 .scroll-progress-container {
   position: fixed;
   top: 94px;
@@ -170,6 +170,21 @@
 
 .blog-post-content p {
   margin-bottom: 2rem;
+}
+
+
+.blog-inline-link {
+  color: var(--accent-gold, #e2b13c);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease, opacity 0.2s ease;
+  font-weight: 600;
+}
+
+.blog-inline-link:hover {
+  text-decoration-color: var(--accent-gold, #e2b13c);
+  opacity: 0.85;
 }
 
 /* ── Drop Cap ── */
@@ -559,3 +574,70 @@
     font-size: 1.15rem;
   }
 }
+
+/* ── Newsletter Subscription Form ── */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f4f4f5;
+  font-size: 0.875rem;
+  font-family: inherit;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.newsletter-input::placeholder {
+  color: #71717a;
+}
+
+.newsletter-input:focus {
+  border-color: var(--accent-gold, #e2b13c);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-input--error {
+  border-color: #f87171 !important;
+}
+
+.newsletter-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.newsletter-feedback {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.newsletter-feedback--success {
+  color: #4ade80;
+}
+
+.newsletter-feedback--error {
+  color: #f87171;
+}
+
+.newsletter-submit {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  margin-top: 0.25rem;
+}
+
+.newsletter-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

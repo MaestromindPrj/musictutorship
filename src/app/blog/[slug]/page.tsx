@@ -102,12 +102,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
             </div>
             <span className="divider-line"></span>
           </div>
-
-          {/* Content Body */}
           <div className="blog-post-content">
             
             <p className="intro animate-on-scroll">
-              Let me start with a number that should concern every producer reading this. <strong>238</strong>. That is how many of SZA&apos;s songs were found inside an AI training database without her knowledge, without her consent, and without a single rupee paid to her. When the Grammy-winning artist searched her own name on an open AI music database, that is what came back. 
+              Let me start with a number that should concern every producer reading this. <strong>238</strong>. That is how many of <a href="https://www.deccanchronicle.com/entertainment/music/sza-slams-ai-after-discovering-238-of-her-songs-were-used-to-train-models-1966181" target="_blank" rel="noopener noreferrer" className="blog-inline-link">SZA&apos;s songs</a> were found inside an AI training database without her knowledge, without her consent, and without a single rupee paid to her. When the Grammy-winning artist searched her own name on an open AI music database, that is what came back. 
             </p>
 
             <p className="animate-on-scroll">

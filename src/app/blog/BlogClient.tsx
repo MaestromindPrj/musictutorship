@@ -4,12 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/hero/Hero";
+import NewsletterCTA from "@/components/blog/NewsletterCTA";
 
 const BLOG_POSTS = [
   {
     slug: "how-ai-is-stealing-music-from-artists",
-    title: "How AI Is Stealing Music From Artists",
-    desc: "238 of SZA's songs were found inside an AI training database without her knowledge or consent, including unreleased material. How AI is stealing music from artists is not a future concern—it is happening right now, at an industrial scale. This deep-dive walks you through the technology, the lawsuits, and the Indian court cases setting global precedents.",
+    title: "How AI Is Stealing Music: What Every Producer Needs to Know in 2026",
+    desc: "Discover how AI is stealing music from artists, the legal battles shaping the music industry, and what music producers can do to protect their creative work in the era of artificial intelligence.",
     category: "AI & COPYRIGHT",
     tags: ["AI", "COPYRIGHT", "LEGAL", "INDUSTRY INSIGHTS"],
     image: "/images/ai_music_theft.jpeg",
@@ -22,45 +23,11 @@ export default function BlogClient() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  // Newsletter subscription state
-  const [emailInput, setEmailInput] = useState("");
-  const [subStatus, setSubStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [subMessage, setSubMessage] = useState("");
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.trim())) {
-      setSubStatus("error");
-      setSubMessage("Please enter a valid email address.");
-      return;
-    }
-    setSubStatus("loading");
-    setSubMessage("");
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbwYdQ_ZZtW2xDxC8xn0ATq4pJVS9eUoYGnnpwE8p0xAhLev9SLBn1nzU-rgk5pMmSmwRQ/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: emailInput.trim() }),
-        }
-      );
-      setSubStatus("success");
-      setSubMessage("You\'re subscribed! Check your inbox soon.");
-      setEmailInput("");
-    } catch {
-      setSubStatus("error");
-      setSubMessage("Something went wrong. Please try again.");
-    }
-  };
 
   // Derive categories and tags dynamically from existing articles
   const categories = ["All", ...Array.from(new Set(BLOG_POSTS.map(post => post.category)))];
   const tags = Array.from(new Set(BLOG_POSTS.flatMap(post => post.tags)));
 
-  // Filter logic
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -184,42 +151,7 @@ export default function BlogClient() {
           </div>
 
           <div className="blog-sidebar">
-            <div className="sidebar-widget widget-dark">
-              <span className="widget-subtitle">EMAIL NEWSLETTER</span>
-              <h3 className="widget-title">Join the Newsletter Now!</h3>
-              <p className="widget-desc">
-                Get expert tips on copyright protection, AI trends, and music business directly in your inbox.
-              </p>
-              <form onSubmit={handleSubscribe} noValidate className="newsletter-form">
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  name="email"
-                  value={emailInput}
-                  onChange={(e) => {
-                    setEmailInput(e.target.value);
-                    if (subStatus !== "idle") { setSubStatus("idle"); setSubMessage(""); }
-                  }}
-                  placeholder="Enter your email address"
-                  className={`newsletter-input${subStatus === "error" ? " newsletter-input--error" : ""}`}
-                  disabled={subStatus === "loading" || subStatus === "success"}
-                  required
-                  aria-label="Email address for newsletter"
-                />
-                {subMessage && (
-                  <p className={`newsletter-feedback${subStatus === "success" ? " newsletter-feedback--success" : " newsletter-feedback--error"}`}>
-                    {subMessage}
-                  </p>
-                )}
-                <button
-                  type="submit"
-                  className="btn-light newsletter-submit"
-                  disabled={subStatus === "loading" || subStatus === "success"}
-                >
-                  {subStatus === "loading" ? "SUBSCRIBING…" : subStatus === "success" ? "SUBSCRIBED ✓" : "SUBSCRIBE NOW"}
-                </button>
-              </form>
-            </div>
+            <NewsletterCTA variant="sidebar" />
 
            
             {tags.length > 0 && (

@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: "Explore in-depth analyses of technology, legal precedents, and career guides for modern music producers.",
 };
 
-export default function BlogPage() {
+
+export default function BlogPage() {  
   return <BlogClient />;
+  
 }

@@ -16,7 +16,7 @@ export default function ReadingAnimations() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          // Once animated, we can unobserve if we want it to stay permanent
+
           observer.unobserve(entry.target);
         }
       });
@@ -29,5 +29,5 @@ export default function ReadingAnimations() {
     };
   }, []);
 
-  return null; // Side-effect only component
+  return null;
 }
